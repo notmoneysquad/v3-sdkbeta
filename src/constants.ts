@@ -31,7 +31,33 @@ export const FACTORY_ADDRESS_MAP: { [chainId: number]: string } = {
   168587773: '0xE63D69fFdB211dD747ad8970544043fADE7d20f5'
 }
 
-export const INIT_CODE_HASH = '0xc9715eb6db3ca1b055b197bd8b44647d9fcc358d2ca358c4f49c973e48a13484'
+export const INIT_CODE_HASH = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f'
+
+export const INIT_CODE_HASH_MAP: { [chainId: number]: string } = {
+  // Mainnet
+  1: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  // Ropsten
+  3: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  // Goerli
+  5: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  // Optimism
+  10: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  // Arbitrum
+  42161: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  // Avalanche
+  43114: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  // Base
+  8453: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  // BNB
+  56: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  // Polygon
+  137: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  // Celo
+  42220: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  // Blast Sepolia
+  168587773: '0xc9715eb6db3ca1b055b197bd8b44647d9fcc358d2ca358c4f49c973e48a13484'
+}
+
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 

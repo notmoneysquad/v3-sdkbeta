@@ -7,7 +7,6 @@ import { BigNumber } from '@ethersproject/bignumber'
 
 import {
   FACTORY_ADDRESS_MAP,
-  INIT_CODE_HASH,
   MINIMUM_LIQUIDITY,
   FIVE,
   _997,
@@ -16,7 +15,8 @@ import {
   ZERO,
   BASIS_POINTS,
   ONE_HUNDRED_PERCENT,
-  ZERO_PERCENT
+  ZERO_PERCENT,
+  INIT_CODE_HASH_MAP
 } from '../constants'
 import { InsufficientReservesError, InsufficientInputAmountError } from '../errors'
 
@@ -33,7 +33,7 @@ export const computePairAddress = ({
   return getCreate2Address(
     factoryAddress,
     keccak256(['bytes'], [pack(['address', 'address'], [token0.address, token1.address])]),
-    INIT_CODE_HASH
+    INIT_CODE_HASH_MAP[tokenA.chainId]
   )
 }
 export class Pair {
