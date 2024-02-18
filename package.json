@@ -1,16 +1,16 @@
 {
-  "name": "@uniswap/v2-sdk",
+  "name": "@monoswap-labs/v2-sdk",
   "license": "MIT",
-  "version": "4.1.0",
-  "description": "🛠 An SDK for building applications on top of Uniswap V2",
+  "version": "3.0.1",
+  "description": "🛠 An SDK for building applications on top of Monoswap V2",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/Uniswap/uniswap-v2-sdk.git",
+  "repository": "https://github.com/monoswap-labs/v2-sdk.git",
   "keywords": [
-    "uniswap",
+    "monoswap",
     "ethereum"
   ],
   "module": "dist/v2-sdk.esm.js",
@@ -24,7 +24,7 @@
   "dependencies": {
     "@ethersproject/address": "^5.0.0",
     "@ethersproject/solidity": "^5.0.0",
-    "@uniswap/sdk-core": "^4.0.7",
+    "@monoswap-labs/sdk-core": "^3.0.0",
     "tiny-invariant": "^1.1.0",
     "tiny-warning": "^1.0.3"
   },

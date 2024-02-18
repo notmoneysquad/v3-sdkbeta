@@ -1,4 +1,4 @@
-import { BigintIsh, Price, sqrt, Token, CurrencyAmount, Percent } from '@uniswap/sdk-core'
+import { BigintIsh, Price, sqrt, Token, CurrencyAmount, Percent } from '@monoswap-labs/sdk-core'
 import invariant from 'tiny-invariant'
 import JSBI from 'jsbi'
 import { pack, keccak256 } from '@ethersproject/solidity'
@@ -7,7 +7,6 @@ import { BigNumber } from '@ethersproject/bignumber'
 
 import {
   FACTORY_ADDRESS_MAP,
-  INIT_CODE_HASH,
   MINIMUM_LIQUIDITY,
   FIVE,
   _997,
@@ -16,7 +15,9 @@ import {
   ZERO,
   BASIS_POINTS,
   ONE_HUNDRED_PERCENT,
-  ZERO_PERCENT
+  ZERO_PERCENT,
+  INIT_CODE_HASHES,
+  INIT_CODE_HASH
 } from '../constants'
 import { InsufficientReservesError, InsufficientInputAmountError } from '../errors'
 
@@ -33,7 +34,7 @@ export const computePairAddress = ({
   return getCreate2Address(
     factoryAddress,
     keccak256(['bytes'], [pack(['address', 'address'], [token0.address, token1.address])]),
-    INIT_CODE_HASH
+    INIT_CODE_HASHES[tokenA.chainId] ? INIT_CODE_HASHES[tokenA.chainId]! : INIT_CODE_HASH
   )
 }
 export class Pair {
@@ -52,8 +53,8 @@ export class Pair {
       tokenAmounts[0].currency.chainId,
       Pair.getAddress(tokenAmounts[0].currency, tokenAmounts[1].currency),
       18,
-      'UNI-V2',
-      'Uniswap V2'
+      'MONO-V2',
+      'Monoswap V2'
     )
     this.tokenAmounts = tokenAmounts as [CurrencyAmount<Token>, CurrencyAmount<Token>]
   }

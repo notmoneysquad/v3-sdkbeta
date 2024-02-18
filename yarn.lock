@@ -1438,6 +1438,18 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
+"@monoswap-labs/sdk-core@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@monoswap-labs/sdk-core/-/sdk-core-3.0.0.tgz#e4b5d550f381e7df3a60646e8ca30827f0853d5c"
+  integrity sha512-6ZHDdPPcmcAOovM+RqogGurIWYqyG3zFckerZ3uulWnMNADmbXBQXL7tu5TTVv+/ylAL092unGRriX2XpiW/7Q==
+  dependencies:
+    "@ethersproject/address" "^5.0.2"
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.4"
+    tiny-invariant "^1.1.0"
+    toformat "^2.0.0"
+
 "@rollup/plugin-babel@^5.1.0":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-babel/-/plugin-babel-5.3.0.tgz#9cb1c5146ddd6a4968ad96f209c50c62f92f9879"
@@ -1705,18 +1717,6 @@
     lodash "^4.17.15"
     semver "^7.3.2"
     tsutils "^3.17.1"
-
-"@uniswap/sdk-core@^4.0.7":
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/@uniswap/sdk-core/-/sdk-core-4.0.7.tgz#90dfd070d7e44494234618af398da158363ae827"
-  integrity sha512-jscx7KUIWzQatcL5PHY6xy0gEL9IGQcL5h/obxzX9foP2KoNk9cq66Ia8I2Kvpa7zBcPOeW1hU0hJNBq6CzcIQ==
-  dependencies:
-    "@ethersproject/address" "^5.0.2"
-    big.js "^5.2.2"
-    decimal.js-light "^2.5.0"
-    jsbi "^3.1.4"
-    tiny-invariant "^1.1.0"
-    toformat "^2.0.0"
 
 "@uniswap/v2-core@^1.0.1":
   version "1.0.1"

@@ -1,4 +1,4 @@
-import { ChainId, CurrencyAmount, Price, Token, WETH9 } from '@uniswap/sdk-core'
+import { ChainId, CurrencyAmount, Price, Token, WETH9 } from '@monoswap-labs/sdk-core'
 import { InsufficientInputAmountError } from '../errors'
 import { computePairAddress, Pair } from './pair'
 import { BigNumber } from '@ethersproject/bignumber'
@@ -364,8 +364,8 @@ describe('Pair', () => {
     })
 
     it('getLiquidityMinted:!0', async () => {
-      const tokenA = new Token(3, '0x0000000000000000000000000000000000000001', 18)
-      const tokenB = new Token(3, '0x0000000000000000000000000000000000000002', 18)
+      const tokenA = new Token(168587773, '0x0000000000000000000000000000000000000001', 18)
+      const tokenB = new Token(168587773, '0x0000000000000000000000000000000000000002', 18)
       const pair = new Pair(
         CurrencyAmount.fromRawAmount(tokenA, '10000'),
         CurrencyAmount.fromRawAmount(tokenB, '10000')
@@ -383,8 +383,8 @@ describe('Pair', () => {
     })
 
     it('getLiquidityValue:!feeOn', async () => {
-      const tokenA = new Token(3, '0x0000000000000000000000000000000000000001', 18)
-      const tokenB = new Token(3, '0x0000000000000000000000000000000000000002', 18)
+      const tokenA = new Token(168587773, '0x0000000000000000000000000000000000000001', 18)
+      const tokenB = new Token(168587773, '0x0000000000000000000000000000000000000002', 18)
       const pair = new Pair(CurrencyAmount.fromRawAmount(tokenA, '1000'), CurrencyAmount.fromRawAmount(tokenB, '1000'))
 
       {
@@ -424,8 +424,8 @@ describe('Pair', () => {
     })
 
     it('getLiquidityValue:feeOn', async () => {
-      const tokenA = new Token(3, '0x0000000000000000000000000000000000000001', 18)
-      const tokenB = new Token(3, '0x0000000000000000000000000000000000000002', 18)
+      const tokenA = new Token(1, '0x0000000000000000000000000000000000000001', 18)
+      const tokenB = new Token(1, '0x0000000000000000000000000000000000000002', 18)
       const pair = new Pair(CurrencyAmount.fromRawAmount(tokenA, '1000'), CurrencyAmount.fromRawAmount(tokenB, '1000'))
 
       const liquidityValue = pair.getLiquidityValue(

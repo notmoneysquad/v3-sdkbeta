@@ -1,10 +1,10 @@
-import { Percent } from '@uniswap/sdk-core'
+import {ChainId, Percent} from '@monoswap-labs/sdk-core'
 import JSBI from 'jsbi'
 
 /**
  * @deprecated use FACTORY_ADDRESS_MAP instead
  */
-export const FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
+export const FACTORY_ADDRESS = '0xE63D69fFdB211dD747ad8970544043fADE7d20f5'
 
 export const FACTORY_ADDRESS_MAP: { [chainId: number]: string } = {
   // Mainnet
@@ -26,10 +26,20 @@ export const FACTORY_ADDRESS_MAP: { [chainId: number]: string } = {
   // Polygon
   137: '0x9e5A52f57b3038F1B8EeE45F28b3C1967e22799C',
   // Celo
-  42220: '0x79a530c8e2fA8748B7B40dd3629C0520c2cCf03f'
+  42220: '0x79a530c8e2fA8748B7B40dd3629C0520c2cCf03f',
+  // Blast Sepolia
+  168587773: '0xE63D69fFdB211dD747ad8970544043fADE7d20f5'
 }
 
 export const INIT_CODE_HASH = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f'
+
+export const INIT_CODE_HASHES: { [chainId: number]: string } = {
+  [ChainId.MAINNET]: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  [ChainId.SEPOLIA]: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  [ChainId.GOERLI]: '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f',
+  [ChainId.BLAST_SEPOLIA]: '0xda571d86ad43edb30b030580c077ec40d48a0a4203fc3d13dc8ebda8e7b46c44',
+};
+
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
